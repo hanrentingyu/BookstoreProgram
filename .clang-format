@@ -1,0 +1,47 @@
+# .clang-format 配置文件
+# 基于 Google C++ Style Guide
+
+Language: Cpp
+BasedOnStyle: Google
+
+# 缩进宽度：大厂通常用 2 空格（Google 标准），部分用 4 空格。
+# 如果你习惯 4 空格，把下面改成 4 即可。
+IndentWidth: 2
+
+# 连续对齐：保持 Google 风格
+ContinuationIndentWidth: 2
+
+# 【关键】大括号风格：Attach 表示大括号跟在语句后面（不换行）
+# 这正是 while(cond) { 的风格
+BreakBeforeBraces: Attach
+
+# 函数定义的大括号也跟在后面
+AllowShortFunctionsOnASingleLine: Empty
+
+# 控制语句（if, while, for）的大括号即使只有一行也保留
+AlwaysWrapAfterControlStatement: false
+
+# 指针和引用符号靠左：int* p 而不是 int *p
+PointerAlignment: Left
+
+# 引用符号靠左：int& r
+ReferenceAlignment: Left
+
+# 访问修饰符（public/private）缩进
+AccessModifierOffset: -2
+
+# 构造函数初始化列表换行策略
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+
+# 参数换行策略
+BinPackArguments: true
+BinPackParameters: true
+
+# 包含头文件的排序（可选，保持整洁）
+SortIncludes: CaseInsensitive
+
+# 每行最大字符数
+ColumnLimit: 100
+
+# 命名空间大括号风格
+NamespaceIndentation: None
